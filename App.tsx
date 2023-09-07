@@ -6,7 +6,11 @@
  */
 
 import React, { useEffect } from 'react';
+<<<<<<< HEAD
+import type { PropsWithChildren } from 'react';
+=======
 import type {PropsWithChildren} from 'react';
+>>>>>>> c6a600fcecf93c7b3128fa335c78a6daf8f04089
 import SplashScreen from 'react-native-splash-screen'
 import {
   Platform,
@@ -27,14 +31,27 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+// import {
+//   GoogleSignin,
+//   GoogleSigninButton,
+//   statusCodes,
+// } from '@react-native-google-signin/google-signin'
+
+import Facebook from './components/Button/Facebook';
+
+import { useState } from 'react';
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({children, title}: SectionProps): JSX.Element {
+
+function Section({ children, title }: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+
   return (
+
     <View style={styles.sectionContainer}>
+      <Facebook />
       <Text
         style={[
           styles.sectionTitle,
@@ -58,6 +75,8 @@ function Section({children, title}: SectionProps): JSX.Element {
 }
 
 function App(): JSX.Element {
+
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -65,7 +84,11 @@ function App(): JSX.Element {
   };
 
   useEffect(() => {
+<<<<<<< HEAD
+    if (Platform.OS === 'android') {
+=======
     if(Platform.OS === 'android'){
+>>>>>>> c6a600fcecf93c7b3128fa335c78a6daf8f04089
       SplashScreen.hide();
     }
   }, [])
