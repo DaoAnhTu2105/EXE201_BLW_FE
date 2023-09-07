@@ -5,9 +5,11 @@
  * @format
  */
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
+import React, { useEffect } from 'react';
+import type { PropsWithChildren } from 'react';
+import SplashScreen from 'react-native-splash-screen'
 import {
+  Platform,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -25,14 +27,27 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+// import {
+//   GoogleSignin,
+//   GoogleSigninButton,
+//   statusCodes,
+// } from '@react-native-google-signin/google-signin'
+
+import Facebook from './components/Button/Facebook';
+
+import { useState } from 'react';
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({children, title}: SectionProps): JSX.Element {
+
+function Section({ children, title }: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+
   return (
+
     <View style={styles.sectionContainer}>
+      <Facebook />
       <Text
         style={[
           styles.sectionTitle,
@@ -56,11 +71,19 @@ function Section({children, title}: SectionProps): JSX.Element {
 }
 
 function App(): JSX.Element {
+
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  useEffect(() => {
+    if (Platform.OS === 'android') {
+      SplashScreen.hide();
+    }
+  }, [])
 
   return (
     <SafeAreaView style={backgroundStyle}>
