@@ -5738,6 +5738,7 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   "version" "17.0.2"
 
+<<<<<<< HEAD
 "react-native-splash-screen@^3.3.0":
   "integrity" "sha512-rGjt6HkoSXxMqH4SQUJ1gnPQlPJV8+J47+4yhgTIan4bVvAwJhEeJH7wWt9hXSdH4+VfwTS0GTaflj1Tw83IhA=="
   "resolved" "https://registry.npmjs.org/react-native-splash-screen/-/react-native-splash-screen-3.3.0.tgz"
@@ -5747,6 +5748,17 @@
   "integrity" "sha512-+vrObi0wZR+NeqL09KihAAdVlQ9IdplwznJWtYrjnQ4UbCW6rkzZJebRsugwUneSOKNFaHFEo1uKU89HsgtYBg=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.72.4.tgz"
   "version" "0.72.4"
+=======
+react-native-splash-screen@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.npmjs.org/react-native-splash-screen/-/react-native-splash-screen-3.3.0.tgz"
+  integrity sha512-rGjt6HkoSXxMqH4SQUJ1gnPQlPJV8+J47+4yhgTIan4bVvAwJhEeJH7wWt9hXSdH4+VfwTS0GTaflj1Tw83IhA==
+
+react-native@*, react-native@>=0.57.0, react-native@0.72.4:
+  version "0.72.4"
+  resolved "https://registry.npmjs.org/react-native/-/react-native-0.72.4.tgz"
+  integrity sha512-+vrObi0wZR+NeqL09KihAAdVlQ9IdplwznJWtYrjnQ4UbCW6rkzZJebRsugwUneSOKNFaHFEo1uKU89HsgtYBg==
+>>>>>>> c6a600fcecf93c7b3128fa335c78a6daf8f04089
   dependencies:
     "@jest/create-cache-key-function" "^29.2.1"
     "@react-native-community/cli" "11.3.6"
