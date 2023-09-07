@@ -6,11 +6,7 @@
  */
 
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
 import type { PropsWithChildren } from 'react';
-=======
-import type {PropsWithChildren} from 'react';
->>>>>>> c6a600fcecf93c7b3128fa335c78a6daf8f04089
 import SplashScreen from 'react-native-splash-screen'
 import {
   Platform,
@@ -84,11 +80,7 @@ function App(): JSX.Element {
   };
 
   useEffect(() => {
-<<<<<<< HEAD
-    if (Platform.OS === 'android') {
-=======
     if(Platform.OS === 'android'){
->>>>>>> c6a600fcecf93c7b3128fa335c78a6daf8f04089
       SplashScreen.hide();
     }
   }, [])
